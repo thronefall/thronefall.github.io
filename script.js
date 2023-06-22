@@ -73,6 +73,8 @@ class Score {
 function setup() {
   createCanvas(0,0);
 
+  console.log('hey?');
+
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
@@ -87,4 +89,6 @@ function setup() {
     .catch(error => {
       console.error('Error:', error);
     });
+
+  console.log('bye');
 }
