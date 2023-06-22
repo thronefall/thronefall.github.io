@@ -1,7 +1,7 @@
 const apiKey = 'AIzaSyAxojOxEvQYES6H6QQlunJh00biz576l7s';
 const formId = '1OsEDowlQoepXk795W21XQxWeYCucVjakS8tPB1Qvsd0';
 
-const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${formId}/values/FormResponses1?key=${apiKey}`;
+const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${formId}/values/Verified?key=${apiKey}`;
 
 fetch(apiUrl)
   .then(response => response.json())
@@ -9,7 +9,7 @@ fetch(apiUrl)
     // Process the retrieved responses
     //console.log(data);
     console.log(data.values);
-    for(let i = 1; i < data.values.length; i++) {
+    for(let i = 0; i < data.values.length; i++) {
       score = data.values[i];
       scores.push(new Score(score[1], score[3], score[4], score[2]));
     }
@@ -22,7 +22,7 @@ let scores = [];
 
 const levelSelected = document.querySelector('#level-selected');
 const verified = document.querySelector('.verified');
-const unverified = document.querySelector('.unverified');
+//const unverified = document.querySelector('.unverified');
 
 document.querySelector('#neuland').addEventListener('click', function() {
   displayScores('Neuland');
@@ -33,7 +33,7 @@ document.querySelector('#nordfels').addEventListener('click', function() {
 
 
 function displayScores(level) {
-  unverified.innerHTML = '';
+  verified.innerHTML = '';
   levelSelected.innerHTML = level;
 
   let display = [];
@@ -46,7 +46,7 @@ function displayScores(level) {
   display.sort(compare);
   display.forEach(score => {
     let tmpDiv = createElement('div', score.username + ' : ' + score.score);
-    tmpDiv.parent(unverified);
+    tmpDiv.parent(verified);
   });
 }
 
