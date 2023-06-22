@@ -1,18 +1,10 @@
 {
   "neuland": {
-    "verified": {
-
-    },
-    "unverified": {
-      
-    }
+    "verified": [],
+    "unverified": []
   },
   "nordfels": {
-    "verified": {
-
-    },
-    "unverified": {
-
-    }
+    "verified": [],
+    "unverified": []
   }
 }
