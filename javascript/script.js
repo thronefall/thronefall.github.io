@@ -7,7 +7,7 @@ fetch(apiUrl)
   .then(response => response.json())
   .then(data => {
     // Process the retrieved responses
-    console.log(data);
+    //console.log(data);
     console.log(data.values);
     for(let i = 1; i < data.values.length; i++) {
       score = data.values[i];
@@ -70,8 +70,4 @@ class Score {
 
 function setup() {
   createCanvas(0,0);
-
-  console.log('hey?');
-
-  console.log('bye');
 }
