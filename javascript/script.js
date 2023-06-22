@@ -3,7 +3,6 @@ const formId = '1OsEDowlQoepXk795W21XQxWeYCucVjakS8tPB1Qvsd0';
 
 const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${formId}/values/FormResponses1?key=${apiKey}`;
 
-/*
 fetch(apiUrl)
   .then(response => response.json())
   .then(data => {
@@ -18,7 +17,6 @@ fetch(apiUrl)
   .catch(error => {
     console.error('Error:', error);
   });
-  */
 
 let scores = [];
 
@@ -74,21 +72,6 @@ function setup() {
   createCanvas(0,0);
 
   console.log('hey?');
-
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      // Process the retrieved responses
-      console.log(data);
-      console.log(data.values);
-      for(let i = 1; i < data.values.length; i++) {
-        score = data.values[i];
-        scores.push(new Score(score[1], score[3], score[4], score[2]));
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
 
   console.log('bye');
 }
