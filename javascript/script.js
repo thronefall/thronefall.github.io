@@ -33,7 +33,8 @@ document.querySelector('#nordfels').addEventListener('click', function() {
 
 
 function displayScores(level) {
-unverified.innerHTML = '';
+  unverified.innerHTML = '';
+  levelSelected.innerHTML = level;
 
   let display = [];
   scores.forEach(score => {
