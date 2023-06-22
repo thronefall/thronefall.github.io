@@ -2,7 +2,8 @@ const apiKey = 'AIzaSyAxojOxEvQYES6H6QQlunJh00biz576l7s';
 const formId = '1OsEDowlQoepXk795W21XQxWeYCucVjakS8tPB1Qvsd0';
 
 const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${formId}/values/FormResponses1?key=${apiKey}`;
-"Requests from referer http://127.0.0.1:55795/ are blocked."
+
+/*
 fetch(apiUrl)
   .then(response => response.json())
   .then(data => {
@@ -17,6 +18,7 @@ fetch(apiUrl)
   .catch(error => {
     console.error('Error:', error);
   });
+  */
 
 let scores = [];
 
@@ -70,4 +72,19 @@ class Score {
 
 function setup() {
   createCanvas(0,0);
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      // Process the retrieved responses
+      console.log(data);
+      console.log(data.values);
+      for(let i = 1; i < data.values.length; i++) {
+        score = data.values[i];
+        scores.push(new Score(score[1], score[3], score[4], score[2]));
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
 }
