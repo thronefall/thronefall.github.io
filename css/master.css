@@ -1,6 +1,6 @@
 @font-face {
   font-family: Thronefall;
-  src: url(assets/UnifrakturCook-Bold.tff);
+  src: url('/assets/UnifrakturCook-Bold.ttf');
 }
 
 body {
