@@ -15,7 +15,11 @@ nav > button {
 }
 
 button {
-  
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c8a675;
+  border-radius: 4px;
+  padding: 16px;
 }
 
 #header {
