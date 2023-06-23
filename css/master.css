@@ -26,7 +26,7 @@ button {
   border-color: #c8a675;
   border-radius: 4px;
   padding: 16px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   color: #c8a675;
 }
 
