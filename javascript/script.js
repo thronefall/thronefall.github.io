@@ -45,7 +45,7 @@ function displayScores(level) {
 
   display.sort(compare);
   display.forEach(score => {
-    let tmpDiv = createElement('div', score.username + ' : ' + score.score);
+    let tmpDiv = createElement('div', score.username + ' : <span class="numbers">' + score.score + '</span>');
     tmpDiv.parent(verified);
   });
 }
