@@ -20,6 +20,8 @@ button {
   border-color: #c8a675;
   border-radius: 4px;
   padding: 16px;
+  background-color: transparent;
+  color: #ffe7c4;
 }
 
 #header {
