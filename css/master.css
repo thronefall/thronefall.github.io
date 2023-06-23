@@ -21,8 +21,13 @@ button {
   border-radius: 4px;
   padding: 16px;
   background-color: transparent;
-  color: #ffe7c4;
+  color: #c8a675;
 }
+
+button:hover {
+  border-color: #ffe7c4;
+  color: #ffe7c4;
+  transition: 500ms;
 
 #header {
 
