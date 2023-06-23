@@ -28,6 +28,7 @@ button:hover {
   border-color: #ffe7c4;
   color: #ffe7c4;
   transition: 500ms;
+}
 
 #header {
 
@@ -43,7 +44,6 @@ button:hover {
 
 .verified {
   color: #ffe7c4;
-  
 }
 
 .unverified {
